@@ -69,6 +69,8 @@
 
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
+  
+  <script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
 
   {{ content_for_header }}
 </head>
@@ -110,5 +112,30 @@
   </div>
             
 {% include 'subscription-theme-footer' %}
+  
+  <script>
+    
+    $('#SingleOptionSelector-0').change(function(){
+      	if($('#SingleOptionSelector-0').val() == '1 week')
+        {
+        	$('#rc_shipping_interval_frequency').val(1);
+        }
+        else
+        {
+        	$('#rc_shipping_interval_frequency').val(4);
+        }
+      
+      });
+    
+   
+    
+//     jQuery( document ).ready(function() {
+//    	    jQuery( "#SingleOptionSelector-0" ).change(function() {
+//           alert( "Handler for .change() called." );
+//         });
+//     });
+    
+  </script>
+  
 </body>
 </html>
